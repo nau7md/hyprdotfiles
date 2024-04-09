@@ -1,12 +1,15 @@
 // Config //
 configuration {
-    modi:                        "drun";
+    modi:                        "drun,filebrowser,window,run";
     show-icons:                  true;
-    display-drun:                "";
+    display-drun:                "";
+    display-run:                 "";
+    display-filebrowser:          "";
+    display-window:              "";
     drun-display-format:         "{name}";
     window-format:               "{w}{t}";
     font:                        "JetBrainsMono Nerd Font 10";
-    icon-theme:                  "Tela-circle-dracula";
+    icon-theme:                  "Reversal-black";
 }
 
 @theme "~/.config/rofi/themes/theme.rasi"
@@ -14,8 +17,8 @@ configuration {
 
 // Main //
 window {
-    height:                      600px;
-    width:                       900px;
+    height:                      500px;
+    width:                       600px;
     transparency:                "real";
     fullscreen:                  false;
     enabled:                     true;
@@ -23,7 +26,7 @@ window {
     spacing:                     0px;
     padding:                     0px;
     border:                      2px;
-    border-radius:               40px;
+    border-radius:               10px;
     border-color:                @main-br;
     background-color:            transparent;
 }
@@ -32,56 +35,50 @@ mainbox {
     spacing:                     0px;
     padding:                     0px;
     orientation:                 vertical;
-    children:                    [ "inputbar" , "listbox" ];
+    children:                    [ "listbox" , "inputbar"];
     background-color:            transparent;
-    background-image:            url("~/.config/swww/wall.blur", height);
 }
 
 
 // Inputs //
 inputbar {
-    enabled:                     true;
-    spacing:                     0px;
-    padding:                     80px;
-    children:                    [ "entry" ];
-    background-color:            @main-bg;
-    background-image:            url("~/.config/swww/wall.rofi", width);
-}
-entry {
-    border-radius:               10px;
-    enabled:                     true;
-    spacing:                     0px;
-    padding:                     20px;
-    text-color:                  @main-fg;
-    background-color:            @main-bg;
+    enabled:                     false;
 }
 
 
 // Lists //
 listbox {
-    padding:                     30px;
-    spacing:                     0px;
+    padding:                     5px;
+    spacing:                     5px;
     orientation:                 horizontal;
-    children:                    [ "listview" , "mode-switcher" ];
-    background-color:            @main-bg;
+    children:                    [ "mode-switcher" , "listview" ];
+    background-image:            url("~/.config/swww/wall.blur", height);
 }
 listview {
-    padding:                     10px;
-    spacing:                     10px;
+    padding:                     20px;
+    spacing:                     5px;
     enabled:                     true;
-    columns:                     3;
+    columns:                     1;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
     layout:                      vertical;
     reverse:                     false;
-    fixed-height:                 true;
-    fixed-columns:                true;
+    fixed-height:                true;
+    fixed-columns:               true;
     cursor:                      "default";
-    background-color:            transparent;
+    background-color:            @main-bg;
     text-color:                  @main-fg;
+    border-radius:               10px;
 }
-
+mode-switcher {
+    orientation:                 vertical;
+    width:                       100px;
+    enabled:                     true;
+    padding:                     60px 10px 60px 10px;
+    spacing:                     15px;
+    background-color:            transparent;
+}
 button {
     cursor:                      pointer;
     vertical-align:              0.50;
@@ -99,9 +96,9 @@ button selected {
 // Elements //
 element {
     enabled:                     true;
-    spacing:                     20px;
-    padding:                     9px;
-    border-radius:               25px;
+    spacing:                     30px;
+    padding:                     10px;
+    border-radius:               10px;
     cursor:                      pointer;
     background-color:            transparent;
     text-color:                  @main-fg;
@@ -116,7 +113,7 @@ element selected.normal {
     text-color:                  @select-fg;
 }
 element-icon {
-    size:                        47px;
+    size:                        50px;
     cursor:                      inherit;
     background-color:            transparent;
     text-color:                  inherit;
