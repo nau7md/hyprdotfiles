@@ -1,0 +1,1 @@
+/home/ammarah/hyprdotfiles/.p10k.zsh

@@ -1,0 +1,1 @@
+/home/ammarah/hyprdotfiles/.zshrc
