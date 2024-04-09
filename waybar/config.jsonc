@@ -16,7 +16,7 @@
 
 	"modules-left": ["custom/l_end","hyprland/workspaces","hyprland/window","custom/r_end"],
 	"modules-center": ["custom/l_end","idle_inhibitor","clock","custom/r_end"],
-	"modules-right": ["custom/l_end","tray","custom/r_end","custom/l_end","backlight","bluetooth","pulseaudio","network","custom/r_end","custom/l_end","","cpu","memory","custom/cpuinfo","custom/r_end","custom/l_end","bluetooth","battery","custom/updates","custom/keybindhint","custom/cliphist","custom/r_end","custom/l_end","custom/power","custom/r_end"],
+	"modules-right": ["custom/l_end","tray","custom/r_end","custom/l_end","backlight","bluetooth","pulseaudio","network","custom/r_end","custom/l_end","","cpu","memory","custom/cpuinfo","custom/r_end","custom/l_end","bluetooth","battery","custom/updates","custom/keybindhint","custom/r_end","custom/l_end","custom/power","custom/r_end"],
 
 
 // sourced from modules based on config.ctl //
@@ -118,9 +118,9 @@
         "rotate": 0,
         "format-muted": "婢",
         "on-click": "pavucontrol -t 3",
-        "on-click-middle": "/volumecontrol.sh -o m",
-        "on-scroll-up": "/volumecontrol.sh -o i",
-        "on-scroll-down": "/volumecontrol.sh -o d",
+        "on-click-middle": "/home/ammarah/hyprdotfiles/hyprdots/scripts/volumecontrol.sh -o m",
+        "on-scroll-up": "/home/ammarah/hyprdotfiles/hyprdots/scripts/volumecontrol.sh -o i",
+        "on-scroll-down": "/home/ammarah/hyprdotfiles/hyprdots/scripts/volumecontrol.sh -o d",
         "tooltip-format": "{icon} {desc} // {volume}%",
         "scroll-step": 5,
         "format-icons": {
@@ -140,9 +140,9 @@
         "format-source": "",
         "format-source-muted": "",
         "on-click": "pavucontrol -t 4",
-        "on-click-middle": "/volumecontrol.sh -i m",
-        "on-scroll-up": "/volumecontrol.sh -i i",
-        "on-scroll-down": "/volumecontrol.sh -i d",
+        "on-click-middle": "/home/ammarah/hyprdotfiles/hyprdots/scripts/volumecontrol.sh -i m",
+        "on-scroll-up": "/home/ammarah/hyprdotfiles/hyprdots/scripts/volumecontrol.sh -i i",
+        "on-scroll-down": "/home/ammarah/hyprdotfiles/hyprdots/scripts/volumecontrol.sh -i d",
         "tooltip-format": "{format_source} {source_desc} // {source_volume}%",
         "scroll-step": 5
     },
@@ -187,7 +187,7 @@
     },
 
     "custom/cpuinfo": {
-        "exec": " /cpuinfo.sh",
+        "exec": " /home/ammarah/hyprdotfiles/hyprdots/scripts/cpuinfo.sh",
         "return-type": "json",
         "format": "{}",
         "rotate": 0,
@@ -211,11 +211,11 @@
     },
 
     "custom/updates": {
-        "exec": "/systemupdate.sh",
+        "exec": "/home/ammarah/hyprdotfiles/hyprdots/scripts/systemupdate.sh",
         "return-type": "json",
         "format": "󰮯 {}",
         "rotate": 0,
-        "on-click": "/systemupdate.sh up",
+        "on-click": "/home/ammarah/hyprdotfiles/hyprdots/scripts/systemupdate.sh up",
         "interval": 86400, // once every day
         "tooltip": true,
     },
@@ -223,26 +223,15 @@
     "custom/keybindhint": {
         "format": " ",
         "rotate": 0,
-        "on-click": "/keybinds_hint.sh"
-    },
-
-    "custom/cliphist": {
-        "format": "{}",
-        "rotate": 0,
-        "exec": "echo ; echo 󰅇 clipboard history",
-        "on-click": "sleep 0.1 && /cliphist.sh c",
-        "on-click-right": "sleep 0.1 && /cliphist.sh d",
-        "on-click-middle": "sleep 0.1 && /cliphist.sh w",
-        "interval" : 86400, // once every day
-        "tooltip": true
+        "on-click": "/home/ammarah/hyprdotfiles/hyprdots/scripts/keybinds_hint.sh"
     },
 
     "custom/power": {
         "format": "{}",
         "rotate": 0,
         "exec": "echo ; echo  logout",
-        "on-click": "/logoutlaunch.sh 2",
-        "on-click-right": "/logoutlaunch.sh 1",
+        "on-click": "/home/ammarah/hyprdotfiles/hyprdots/scripts/logoutlaunch.sh 2",
+        "on-click-right": "/home/ammarah/hyprdotfiles/hyprdots/scripts/logoutlaunch.sh 1",
         "interval" : 86400, // once every day
         "tooltip": true
     },
