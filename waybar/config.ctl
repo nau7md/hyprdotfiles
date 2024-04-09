@@ -1,1 +1,2 @@
 1|28|top|( hyprland/workspaces hyprland/window )|( idle_inhibitor clock )|( tray ) ( backlight bluetooth pulseaudio network ) (  cpu memory custom/cpuinfo ) ( bluetooth battery custom/updates custom/keybindhint custom/cliphist ) ( custom/power )
+0|28|bottom|( custom/power custom/cliphist custom/wbar custom/theme custom/wallchange ) ( idle_inhibitor clock custom/spotify )|( wlr/taskbar )|( tray ) ( backlight network bluetooth pulseaudio pulseaudio#microphone )
