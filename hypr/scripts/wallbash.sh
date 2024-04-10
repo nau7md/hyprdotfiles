@@ -30,7 +30,7 @@ done
 
 #// set variables
 
-cacheDir="$HOME/.cache/hyprdots"
+cacheDir="$HOME/.cache/hyprdotfiles"
 wallbashImg="${1}"
 wallbashColors=4
 wallbashFuzz=70

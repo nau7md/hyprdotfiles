@@ -2,7 +2,7 @@
 
 ScrDir=`dirname "$(realpath "$0")"`
 ConfDir="${XDG_CONFIG_HOME:-$HOME/.config}"
-batterynotify_conf=$ConfDir/hyprdots/batterynotify.conf
+batterynotify_conf=$ConfDir/hyprdots-ctl/batterynotify.conf
 config_info() {
 cat <<  EOF
 
