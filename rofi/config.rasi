@@ -1,11 +1,8 @@
 // Config //
 configuration {
-    modi:                        "drun,filebrowser,window,run";
+    modi:                        "drun";
     show-icons:                  true;
-    display-drun:                "";
-    display-run:                 "";
-    display-filebrowser:          "";
-    display-window:              "";
+    display-drun:                "";
     drun-display-format:         "{name}";
     window-format:               "{w}{t}";
     font:                        "JetBrainsMono Nerd Font 10";
@@ -17,8 +14,8 @@ configuration {
 
 // Main //
 window {
-    height:                      500px;
-    width:                       600px;
+    height:                      600px;
+    width:                       900px;
     transparency:                "real";
     fullscreen:                  false;
     enabled:                     true;
@@ -26,7 +23,7 @@ window {
     spacing:                     0px;
     padding:                     0px;
     border:                      2px;
-    border-radius:               10px;
+    border-radius:               40px;
     border-color:                @main-br;
     background-color:            transparent;
 }
@@ -35,50 +32,56 @@ mainbox {
     spacing:                     0px;
     padding:                     0px;
     orientation:                 vertical;
-    children:                    [ "listbox" , "inputbar"];
+    children:                    [ "inputbar" , "listbox" ];
     background-color:            transparent;
+    background-image:            url("~/.config/swww/wall.blur", height);
 }
 
 
 // Inputs //
 inputbar {
-    enabled:                     false;
+    enabled:                     true;
+    spacing:                     0px;
+    padding:                     80px;
+    children:                    [ "entry" ];
+    background-color:            @main-bg;
+    background-image:            url("~/.config/swww/wall.rofi", width);
+}
+entry {
+    border-radius:               10px;
+    enabled:                     true;
+    spacing:                     0px;
+    padding:                     20px;
+    text-color:                  @main-fg;
+    background-color:            @main-bg;
 }
 
 
 // Lists //
 listbox {
-    padding:                     5px;
-    spacing:                     5px;
+    padding:                     30px;
+    spacing:                     0px;
     orientation:                 horizontal;
-    children:                    [ "mode-switcher" , "listview" ];
-    background-image:            url("~/.config/swww/wall.blur", height);
+    children:                    [ "listview" , "mode-switcher" ];
+    background-color:            @main-bg;
 }
 listview {
-    padding:                     20px;
-    spacing:                     5px;
+    padding:                     10px;
+    spacing:                     10px;
     enabled:                     true;
-    columns:                     1;
+    columns:                     3;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
     layout:                      vertical;
     reverse:                     false;
-    fixed-height:                true;
-    fixed-columns:               true;
+    fixed-height:                 true;
+    fixed-columns:                true;
     cursor:                      "default";
-    background-color:            @main-bg;
-    text-color:                  @main-fg;
-    border-radius:               10px;
-}
-mode-switcher {
-    orientation:                 vertical;
-    width:                       100px;
-    enabled:                     true;
-    padding:                     60px 10px 60px 10px;
-    spacing:                     15px;
     background-color:            transparent;
+    text-color:                  @main-fg;
 }
+
 button {
     cursor:                      pointer;
     vertical-align:              0.50;
@@ -96,9 +99,9 @@ button selected {
 // Elements //
 element {
     enabled:                     true;
-    spacing:                     30px;
-    padding:                     10px;
-    border-radius:               10px;
+    spacing:                     20px;
+    padding:                     9px;
+    border-radius:               25px;
     cursor:                      pointer;
     background-color:            transparent;
     text-color:                  @main-fg;
@@ -113,7 +116,7 @@ element selected.normal {
     text-color:                  @select-fg;
 }
 element-icon {
-    size:                        50px;
+    size:                        47px;
     cursor:                      inherit;
     background-color:            transparent;
     text-color:                  inherit;
