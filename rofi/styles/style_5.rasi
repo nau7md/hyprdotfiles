@@ -9,7 +9,6 @@ configuration {
     drun-display-format:         "{name}";
     window-format:               "{w}{t}";
     font:                        "JetBrainsMono Nerd Font 10";
-    icon-theme:                  "Reversal-black;
 }
 
 @theme "~/.config/rofi/themes/theme.rasi"
